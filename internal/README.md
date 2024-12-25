@@ -16,12 +16,11 @@ It typically includes the following subdirectories, adhering to clean architectu
 
 ```plaintext
 internal/
-├── constant/       # Adapters to interact with external systems or interfaces
+├── constant/       # constant define the internal app logic constant.
+                    include: error constant,dto,db and etc
 ├── glue/           # glue define routes for each  app handler and glue it all together.
 ├── handler/        # handler  define the app endpoint eg.auth,user and other. it will server the above layer w/c is glue
-
-├── module/         # module  modularize the app features. it contain the app logic . it will be serve the layer above it w/c is handler layer and can directly interact with the peristanace layer. on hanler
-
-
+├── module/         # module  modularize the app features. it contain the app logic .
+                     it will be serve the layer above it w/c is handler layer and can directly interact with the peristanace layer.
 ├── storage/         # storage  contain the persistance layer of the app. serve the above layer w/c is module layer.  eg.persistance,cach
 ```
