@@ -1,7 +1,5 @@
-
 initproject:
 	-go mod init github.com/BoruTamena/$(project_name)
-
 migrate-down:
 	- migrate -database cockroachdb://root@localhost:26257/dispatch?sslmode=disable -path internal/constant/query/schemas -verbose down
 migrate-up:
