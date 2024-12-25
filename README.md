@@ -188,6 +188,6 @@ Let me know if you need further refinements or additional details!
 - **GitHub:** [https://github.com/BoruTamena]
 
 ---
-### Refernces
+### Reference
   - [go official documentation](https://github.com/golang-standards/project-layout)
   - [go micro service architecture](https://medium.com/@janishar.ali/how-to-create-microservices-a-practical-guide-using-go-35445a821513)
