@@ -1,9 +1,9 @@
 initproject:
-	-go mod init github.com/BoruTamena/$(project_name)
+	-go mod init github.com/$(user_name)/$(project_name)
 migrate-down:
-	- migrate -database cockroachdb://root@localhost:26257/dispatch?sslmode=disable -path internal/constant/query/schemas -verbose down
+	- migrate -database $(db_url) -path $(path) -verbose down
 migrate-up:
-	- migrate -database cockroachdb://root@localhost:26257/dispatch?sslmode=disable -path internal/constant/query/schemas -verbose up
+	- migrate -database $(db_url) -path $(path) -verbose up
 migrate-create:
 	- migrate create -ext sql -dir internal/constant/query/schemas -tz "UTC" $(args)
 swagger:
